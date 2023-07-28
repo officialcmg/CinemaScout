@@ -2,7 +2,7 @@ import React from "react"
 
 
 function Moviecard({ movie }) {
-    
+    const imdbID = movie.imdbID
     return (
         <div className='movie'>
             <div>
@@ -14,7 +14,11 @@ function Moviecard({ movie }) {
             </div>
             <div>
                 <span>{movie.Type}</span>
-                <h3>{movie.Title}</h3>
+                <h3><a
+            href={`https://www.imdb.com/title/${imdbID}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >{movie.Title}</h3>
             </div>
         </div>
 )}

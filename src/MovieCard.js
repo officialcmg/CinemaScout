@@ -2,7 +2,11 @@ import React from "react"
 
 
 function Moviecard({ movie }) {
-    
+    const imdbID = movie.imdbID
+    function handleIMDbLink() {
+        window.open(`https://www.imdb.com/title/${imdbID}`, "_blank");
+      }
+
     return (
         <div className='movie'>
             <div>
@@ -14,7 +18,7 @@ function Moviecard({ movie }) {
             </div>
             <div>
                 <span>{movie.Type}</span>
-                <h3>{movie.Title}</h3>
+                <h3 onClick={handleIMDbLink} style={{ cursor: "pointer"}}>{movie.Title}</h3>
             </div>
         </div>
 )}

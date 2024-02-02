@@ -1,1 +1,1 @@
-https:cinemascout.netlify.app
+https:cinemascout.vercel.app

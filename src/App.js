@@ -5,7 +5,7 @@ import Moviecard from './MovieCard';
 
 
 
-const API_URL = "https://www.omdbapi.com?apikey=bc734feb"
+const API_URL = process.env.API_URL
 
 
 function App() {
